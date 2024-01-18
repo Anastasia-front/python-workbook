@@ -1,50 +1,50 @@
-#Collections
-collection = '''a program object (container variable) that stores a set of values of one or different types.'''
+# Collections
+collection = """a program object (container variable) that stores a set of values of one or different types."""
 
 # The main collection types in Python :
 
-lists='''ordered collections that can contain elements of any type. 
-Lists are mutable, which means you can change, add, or remove items after they are created.'''
+lists = """ordered collections that can contain elements of any type. 
+Lists are mutable, which means you can change, add, or remove items after they are created."""
 
-tuples = '''similar to lists, but they are immutable. This means that once a tuple is created, it cannot be modified. 
-Tuples are often used to store data that should not change while the program is running.'''
+tuples = """similar to lists, but they are immutable. This means that once a tuple is created, it cannot be modified. 
+Tuples are often used to store data that should not change while the program is running."""
 
-dictionaries = '''collections of key-value pairs where each key is unique. 
-Dictionaries are used when quick access to elements by key is required.'''
+dictionaries = """collections of key-value pairs where each key is unique. 
+Dictionaries are used when quick access to elements by key is required."""
 
-sets = '''unordered collections of unique items. 
+sets = """unordered collections of unique items. 
 Used to remove duplicates and perform operations that are typical 
-for mathematical sets, such as union, intersection, difference.'''
+for mathematical sets, such as union, intersection, difference."""
 
-frozen_sets = '''these are invariant versions of sets. 
-Such sets cannot be changed after they are created.'''
+frozen_sets = """these are invariant versions of sets. 
+Such sets cannot be changed after they are created."""
 
 # list methods
 
-chars = ['a', 'b', 'c']
+chars = ["a", "b", "c"]
 numbers = [1, 2]
 chars.extend(numbers)
 chars.insert(1, "b")
-c_ind = chars.index('b')
-chars_copy=chars.copy()
+c_ind = chars.index("b")
+chars_copy = chars.copy()
 copy_chars = chars[:]
-count=chars.count('b')
+count = chars.count("b")
 first = chars.pop(-1)
-last=chars.remove(1)
+last = chars.remove(1)
 chars.sort(reverse=True)
 chars.reverse()
 reverse_chars = chars[::-1]
-chars.clear() # []
+chars.clear()  # []
 print(dir(list))
 
 # dict methods
 
-info = {'name': 'Julia', 'age': 14, 'city': 'Kharkiv', 'email': 'usere@example.com'}
+info = {"name": "Julia", "age": 14, "city": "Kharkiv", "email": "usere@example.com"}
 print("name" in info)
-del info['city']
-info.pop('email')
-info.update({'color':"yellow","number":67})
-new_info=info.copy()
+del info["city"]
+info.pop("email")
+info.update({"color": "yellow", "number": 67})
+new_info = info.copy()
 # without KeyError if key is't in dict
 level = info.get("level")
 # caused KeyError
@@ -96,8 +96,10 @@ a, _, c = my_list
 a, *rest = my_list
 print(*rest)
 
+
 def greet(name, age):
     print(f"Hello {name}, you are {age} years old.")
+
 
 person_info = {"name": "Alice", "age": 25}
 greet(**person_info)
