@@ -32,7 +32,7 @@ print(sorted_dict)
 # set
 char_set = set()
 symbol_set = set()
-    
+
 
 for el in text:
     if el.lower() in alphabet:
@@ -40,5 +40,5 @@ for el in text:
     else:
         symbol_set.add(el)
 
-print(f'Chars {char_set}')
-print(f'Symbols {symbol_set}')
+print(f"Chars {char_set}")
+print(f"Symbols {symbol_set}")
