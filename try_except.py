@@ -1,16 +1,16 @@
 # The main types of exceptionsS
-SyntaxError='is a syntax error'
-ZeroDivisionError ='division by zero'
-valueError = 'occurs when the type of the operand is correct, \
-    but the value is such that the operation cannot be performed.'
-IndentationError='is an error that occurs if an error is made \
-    in the selection of instruction blocks with spaces'
-TabError = 'occurs if you use spaces and tabs to\
-      highlight blocks of instructions in the same file'
-typeError = 'occurs when an operation on a variable of this type is not possible'
+SyntaxError = "is a syntax error"
+ZeroDivisionError = "division by zero"
+valueError = "occurs when the type of the operand is correct, \
+    but the value is such that the operation cannot be performed."
+IndentationError = "is an error that occurs if an error is made \
+    in the selection of instruction blocks with spaces"
+TabError = "occurs if you use spaces and tabs to\
+      highlight blocks of instructions in the same file"
+typeError = "occurs when an operation on a variable of this type is not possible"
 
 # exception handling mechanism - al blocks of code
-letter = 'a'
+letter = "a"
 try:
     letter = int(letter)
 except ValueError:
@@ -29,7 +29,7 @@ while 1:
     try:
         a = int(a_string)
         b = int(b_string)
-        if  a== 0 or b == 0:
+        if a == 0 or b == 0:
             print("Please do not use zero")
         else:
             print(f"a/b={a}/{b}={a/b}")
@@ -57,42 +57,38 @@ while True:
         print("-" * 30)
 
 
-
 # continue operator
-while 'truthy value':
+while "truthy value":
     a = input("Enter some numbers divided by space: ")
     try:
         strip = a.strip()
-        b = strip.split(' ')
-        print(f'Your input - {b}')
+        b = strip.split(" ")
+        print(f"Your input - {b}")
 
         c = []
-        sum=0
+        sum = 0
 
         for num in b:
             c.append(float(num))
-            sum+=float(num)
+            sum += float(num)
 
-        length = len(c)      
+        length = len(c)
 
-        if length== 1:
-            print('You write only one number. Write more than one')
+        if length == 1:
+            print("You write only one number. Write more than one")
         else:
-            print(f'List of numbers - {c}')
-            print(f'Sum - {sum}')
-            print(f'Length - {length}')
+            print(f"List of numbers - {c}")
+            print(f"Sum - {sum}")
+            print(f"Length - {length}")
             for i in c:
                 if i % 2:
                     # print(f'Even number - {i}')
                     continue
-                print(f'Odd number - {i}')
-            length+=1
-            print(f'This is sum of enter numbers - {sum:.3f}')
+                print(f"Odd number - {i}")
+            length += 1
+            print(f"This is sum of enter numbers - {sum:.3f}")
             break
-    except  Exception as error:
+    except Exception as error:
         print(f"Error: {error}")
     finally:
         print("_" * 30)
-
-
-

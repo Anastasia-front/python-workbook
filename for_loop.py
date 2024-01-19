@@ -9,12 +9,12 @@ for color, fruit in zip(colors, fruits):
 # red tomato
 
 # When the collections passed to zip are of different lengths,
-# zip processes the elements until it runs out of elements in the shortest collection. 
-# This means that the iteration stops as soon as the end of one of the collections 
+# zip processes the elements until it runs out of elements in the shortest collection.
+# This means that the iteration stops as soon as the end of one of the collections
 # is reached, and any additional elements in the other, longer collections are ignored.
 
 numbers = [1, 2, 3]
-letters = ['a', 'b', 'c', 'd', 'e']
+letters = ["a", "b", "c", "d", "e"]
 
 for number, letter in zip(numbers, letters):
     print(number, letter)
@@ -56,9 +56,9 @@ sorted_dict = dict(sorted_data)
 print(sorted_dict)
 
 # It's important to remember what you can't do while iterating over the dictionary:
-# you can't remove elements from the dictionary, you can't add elements to the dictionary. 
-# But you can overwrite the values if you iterate over the keys. 
-# The same applies to the list - it is not possible to delete elements of the list 
+# you can't remove elements from the dictionary, you can't add elements to the dictionary.
+# But you can overwrite the values if you iterate over the keys.
+# The same applies to the list - it is not possible to delete elements of the list
 # and it is not possible to add elements to the list during iterations in the loop.
 
 # set - add method

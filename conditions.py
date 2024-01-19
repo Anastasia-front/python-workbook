@@ -1,19 +1,21 @@
-# By default, Python instructions are executed one after the other from top to bottom. 
-flow_of_execution = 'the sequence of execution of expressions in the program'
+# By default, Python instructions are executed one after the other from top to bottom.
+flow_of_execution = "the sequence of execution of expressions in the program"
 
 
 # In Python, there are three ways to control the flow of execution:
 
-conditional_execution ='execution of a block of instructions only under certain conditions'
-loops='repeating the execution of a block of instructions until some condition is met'
-exceptions = 'an error handling mechanism that allows you to control the flow of the program \
-when exceptional situations (for example, errors or other unforeseen circumstances) occur.'
+conditional_execution = (
+    "execution of a block of instructions only under certain conditions"
+)
+loops = "repeating the execution of a block of instructions until some condition is met"
+exceptions = "an error handling mechanism that allows you to control the flow of the program \
+when exceptional situations (for example, errors or other unforeseen circumstances) occur."
 
-# In Python, conditional execution, loops, and exceptions form the basis of controlling 
-# the flow of program execution, allowing the development of complex and flexible data 
+# In Python, conditional execution, loops, and exceptions form the basis of controlling
+# the flow of program execution, allowing the development of complex and flexible data
 # processing and user interaction algorithms.
 
-# A conditional statement in Python is a language construct that allows you to perform 
+# A conditional statement in Python is a language construct that allows you to perform
 # certain actions depending on whether a certain condition is met.
 
 # 0,False,None and empty value casts to False
@@ -25,22 +27,22 @@ else:
     print("Hi Anonym!")
 
 # identity operator
-# The is operator in Python is used to test whether 
-# two objects point to the same area of memory, 
+# The is operator in Python is used to test whether
+# two objects point to the same area of memory,
 # that is, whether they are the same object.
 
-# This operator differs from the == operator, 
+# This operator differs from the == operator,
 # which tests the equality of object values.
 
-# The is operator in Python is used to test the identity of objects, 
-# that is, to determine whether two variables point to the same object in memory. 
-# This operator, often called the identity operator, is especially important 
-# when working with immutable data types such as numbers and strings. 
-# In the case of immutable data types, Python can cache objects, 
+# The is operator in Python is used to test the identity of objects,
+# that is, to determine whether two variables point to the same object in memory.
+# This operator, often called the identity operator, is especially important
+# when working with immutable data types such as numbers and strings.
+# In the case of immutable data types, Python can cache objects,
 # which sometimes causes the is operator to return True for objects
-# with the same values, as in the case of very small integers or short strings. 
+# with the same values, as in the case of very small integers or short strings.
 # It is useful to have this information in case you encounter such an exception in your code.
-    
+
 a = [1, 2, 3]
 b = a
 c = [1, 2, 3]
@@ -53,20 +55,18 @@ print(a is c)  # False
 
 # However, its main use is to check if a variable is None.
 
-my_var=None
+my_var = None
 
 if my_var is None:
-    print('There is no value')
+    print("There is no value")
 
 
 # This use of is is optimal because there is only one None object in Python.
 
 
-
-# Therefore, the is operator should be used to check the identity of objects 
-# when it is important that two variables point to the same object. 
+# Therefore, the is operator should be used to check the identity of objects
+# when it is important that two variables point to the same object.
 # And the == operator should be used to check the equality of the values of two objects.
-    
 
 
 # Outputs "Fizz" if the number is a multiple of some specific number (for example, 3);
@@ -87,20 +87,20 @@ else:
 
 
 # blocks of instructions
-    
-x=int(input('Enter number: ')) 
-y=int(input('Enter number: ')) 
+
+x = int(input("Enter number: "))
+y = int(input("Enter number: "))
 
 if x >= 0:
-     if y >= 0: # x > 0, y > 0
-         print("First quarter")
-     else: # x > 0, y < 0
-         print("Fourth Quarter")
+    if y >= 0:  # x > 0, y > 0
+        print("First quarter")
+    else:  # x > 0, y < 0
+        print("Fourth Quarter")
 else:
-     if y >= 0: # x < 0, y > 0
-         print("Second quarter")
-     else: # x < 0, y < 0
-         print("Third quarter")
+    if y >= 0:  # x < 0, y > 0
+        print("Second quarter")
+    else:  # x < 0, y < 0
+        print("Third quarter")
 
 # ternary operators
 is_nice = True
@@ -122,16 +122,16 @@ msg = some_data or "Did not return of data"
 point = (1, 0)
 
 match point:
-     case (0, 0):
-         print("Point in the center of coordinates")
-     case (0, y):
-         print(f"The point lies on the Y axis: y={y}")
-     case (x, 0):
-         print(f"The point lies on the X-axis: x={x}")
-     case (x, y):
-         print(f"The point has coordinates: x={x}, y={y}")
-     case _:
-         print("This is not a point")
+    case (0, 0):
+        print("Point in the center of coordinates")
+    case (0, y):
+        print(f"The point lies on the Y axis: y={y}")
+    case (x, 0):
+        print(f"The point lies on the X-axis: x={x}")
+    case (x, y):
+        print(f"The point has coordinates: x={x}, y={y}")
+    case _:
+        print("This is not a point")
 
 # it is possible to use the match operator with collections
 
@@ -147,4 +147,3 @@ match plants:
     case _:
         # Case for other combinations
         print("No flowers.")
-

@@ -1,7 +1,6 @@
 import re
 
-
-useful_link = 'https://www.programiz.com/python-programming/regex'
+useful_link = "https://www.programiz.com/python-programming/regex"
 
 # The main components of regular expressions include:
 
@@ -28,7 +27,7 @@ findall = "re.findall(pattern, string) - \
 sub = "re.sub(pattern, repl, string) - replaces occurrences of the pattern with another string."
 split = "re.split(pattern, string) splits a string by pattern."
 
-# Regular expressions use special characters to create patterns. 
+# Regular expressions use special characters to create patterns.
 # They consist of blocks and modifiers.
 
 # An example of a block can be:
@@ -62,9 +61,9 @@ pattern = "Python"
 match = re.search(pattern, text)
 
 if match:
-     print("Found:", match.group())
+    print("Found:", match.group())
 else:
-     print("Not found.")
+    print("Not found.")
 
 # 2 - find word which start from "c" and end by "n"
 pattern = r"c\w*n"
@@ -79,7 +78,7 @@ pattern = r"\w+@\w+\.\w+"
 match = re.search(pattern, text)
 
 if match:
-     print("Email address:", match.group())
+    print("Email address:", match.group())
 
 # 4 - remove the username and domain of this email address separately
 email = "random@fix.com"
@@ -87,50 +86,50 @@ pattern = r"(\w+)@(\w+\.\w+)"
 match = re.search(pattern, email)
 
 if match:
-     user_name = match.group(1)
-     domain_name = match.group(2)
-     print("User name:", user_name)
-     print("Domain:", domain_name)
+    user_name = match.group(1)
+    domain_name = match.group(2)
+    print("User name:", user_name)
+    print("Domain:", domain_name)
 
-#5 - find all the numbers in the string
+# 5 - find all the numbers in the string
 text = "I like number 777, but 28654323 more"
 pattern = r"\d+"
 matches = re.findall(pattern, text)
 
 print(matches)
 
-#6 - we need words that have at least one letter
+# 6 - we need words that have at least one letter
 text = "Elements in a string can be accessed by using indices."
 pattern = r"\w+"
 matches = re.findall(pattern, text)
 
 print(matches)
 
-#7 - find all emails
+# 7 - find all emails
 text = "Contacts: example1@example.com, example2@sample.org"
 pattern = r"\w+@\w+\.\w+"
 matches = re.findall(pattern, text)
 
 print(matches)
 
-#8 - replace all whitespace characters with underscores.
+# 8 - replace all whitespace characters with underscores.
 file_name = "My file Python.txt"
 pattern = r"\s"
 replacement = "_"
 formatted_name = re.sub(pattern, replacement, file_name)
 
-print(formatted_name)  
+print(formatted_name)
 
-#9 - remove all punctuation marks from the line
+# 9 - remove all punctuation marks from the line
 text = "The very first - index is 0, not 1... \
     Therefore, if a string! has 10 elements, :the very last; index will be 9."
 pattern = r"[;,\-:!\.]"
 replacement = ""
 modified_text = re.sub(pattern, replacement, text)
 
-print(modified_text) 
+print(modified_text)
 
-#10 - formatting phone numbers
+# 10 - formatting phone numbers
 phone = """
         Kate Ross: 987-171-1634
         George Bush: 345-134-1729
@@ -142,15 +141,15 @@ formatted_phone = re.sub(pattern, replacement, phone)
 
 print(formatted_phone)
 
-#11 - divide the line into words using spaces as separators
+# 11 - divide the line into words using spaces as separators
 text = "Surprisingly the country that has won the majority of the \
     Nobel prizes is the USA, even if the first winners were all Europeans."
 pattern = r"\s+"
 words = re.split(pattern, text)
 
-print(words)  
+print(words)
 
-#12 - split a string into parts using punctuation marks as separators
+# 12 - split a string into parts using punctuation marks as separators
 text = "{'N': 2; 'o': 7! 'w': 9& 'p': 26? 'e': 17$ 'k': 1% \
     'n':  7; 'g': 3, ':': 1, 'b': 1, 'l': 5, 'u': 1, '.': 2}"
 pattern = r"[;$%&?,\-:!\s]+"
