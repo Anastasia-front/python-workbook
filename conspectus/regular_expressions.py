@@ -156,3 +156,6 @@ pattern = r"[;$%&?,\-:!\s]+"
 elements = re.split(pattern, text)
 
 print(elements)
+
+
+print(dir(re))
