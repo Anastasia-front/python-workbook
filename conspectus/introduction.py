@@ -43,33 +43,46 @@ print(f" {n} seconds consist of {hours} hours, {minutes} minutes and {seconds} s
 # Key features of Python include:
 
 
-# Readability and simplicity: Python has a simple and intuitive syntax that makes it accessible to beginners.
-# It supports both procedural and object-oriented programming.
-# Interpreted language: Python code is executed line by line, making debugging and testing easier.
-# Dynamic typing: Python does not need to declare variable types in advance; the type is determined automatically during program execution.
-# Versatility: Python is used in a wide range of industries, from web development to scientific research,
-#  from data analysis to artificial intelligence.
-# Extensive standard library: Python comes with a standard library that includes a wide set of tools
-#  for various tasks. In fact, it is the Swiss army knife of programming.
-# Community and Support: Python has one of the largest and most active communities among
-# programming languages, contributing to a large number of resources, libraries, and tools.
+"""Readability and simplicity: Python has a simple and intuitive syntax 
+that makes it accessible to beginners.
+It supports both procedural and object-oriented programming.
+Interpreted language: Python code is executed line by line, making debugging and testing easier.
+Dynamic typing: Python does not need to declare variable types in advance; 
+the type is determined automatically during program execution.
+Versatility: Python is used in a wide range of industries, from web development to scientific research,
+ from data analysis to artificial intelligence.
+Extensive standard library: Python comes with a standard library that includes a wide set of tools
+ for various tasks. In fact, it is the Swiss army knife of programming.
+Community and Support: Python has one of the largest and most active communities among
+programming languages, contributing to a large number of resources, libraries, and tools."""
 
 
-# Python is used for both academic and commercial purposes, and its popularity continues to grow due to its flexibility, ease of learning, and large ecosystem.
+# Python is used for both academic and commercial purposes, and its popularity
+# continues to grow due to its flexibility, ease of learning, and large ecosystem.
 
 
 # Today, Python is used in the following areas:
 
+"""
+Web Development: Using frameworks like Django and FastAPI, 
+Python allows you to build scalable web applications and APIs.
 
-# Web Development: Using frameworks like Django and FastAPI, Python allows you to build scalable web applications and APIs.
-# Data Science:
-# Data Mining: Analyzing big data to obtain useful information and knowledge.
-# Machine Learning: Developing models that can learn and make predictions based on data.
-# Deep Learning: Creating complex neural networks to develop systems with a high level of intelligence.
-# Scientific research: Python is widely used in physics, chemistry, biology and other
-# fields of scientific research for data analysis and modeling.
-# Game Development: Although Python is not a primary language for large game development,
-#  it is often used for prototyping and development of game tools.
-# Internet of Things (IoT): Python is used to develop applications that allow devices to interact and be controlled over the Internet.
-# Automation: Python's ease of scripting makes it a popular choice for automating routine tasks.
-# Finance and trading: Financial data analysis, algorithmic trading, risk assessment and much more.
+
+Data Science:
+Data Mining: Analyzing big data to obtain useful information and knowledge.
+
+Machine Learning: Developing models that can learn and make predictions based on data.
+
+Deep Learning: Creating complex neural networks to develop systems with a high level of intelligence.
+
+
+Scientific research: Python is widely used in physics, chemistry, biology and other
+fields of scientific research for data analysis and modeling.
+
+
+Game Development: Although Python is not a primary language for large game development,
+it is often used for prototyping and development of game tools.
+Internet of Things (IoT): Python is used to develop applications that allow 
+devices to interact and be controlled over the Internet.
+Automation: Python's ease of scripting makes it a popular choice for automating routine tasks.
+Finance and trading: Financial data analysis, algorithmic trading, risk assessment and much more."""
