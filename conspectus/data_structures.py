@@ -40,6 +40,8 @@ print(dir(list))
 # dict methods
 
 info = {"name": "Julia", "age": 14, "city": "Kharkiv", "email": "usere@example.com"}
+info["number"]=483498438
+print(f'This is value of number key - {info["number"]}')
 print("name" in info)
 del info["city"]
 info.pop("email")
