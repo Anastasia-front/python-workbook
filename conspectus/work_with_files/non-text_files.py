@@ -4,7 +4,8 @@ you can specify the file opening mode as b, abbreviated from bytes.
 In this mode, you will receive a file object for working with the file in byte-string mode.
 """
 
-with open("raw_data.bin", "wb") as fh:
+folder_path = "example"
+with open(f"{folder_path}/raw_data.bin", "wb") as fh:
     fh.write(b"Hello world!")
 
 """

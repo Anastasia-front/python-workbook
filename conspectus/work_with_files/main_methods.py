@@ -32,10 +32,12 @@ closefd (optional) - must be True (default); if set to False, the file handle wi
 
 opener (optional) - defines a special function for opening the file."""
 
+folder_path = "example"
+file_path = f"{folder_path}/example.txt"
+
 # SIMPLE EXAMPLE -  write() open the file for writing or create a new one if it doesn't exist or overwrite the file, you can specify the w mode value
 print("~" * 30)
-filename = "example.txt"
-fh = open(filename, "w")
+fh = open(file_path, "w")
 symbols_written = fh.write("hello!")
 print(symbols_written)  # 6
 fh.close()
@@ -43,7 +45,7 @@ fh.close()
 print("~" * 30)
 
 # SECOND EXAMPLE - read()
-fh = open("example.txt", "w+")
+fh = open(file_path, "w+")
 fh.write("hello!")
 fh.seek(0)
 
@@ -55,11 +57,11 @@ fh.close()
 print("~" * 30)
 
 # MORE COMPLICATED EXAMPLE
-fh = open("example.txt", "w")
+fh = open(file_path, "w")
 fh.write("bye")
 fh.close()
 
-fh = open("example.txt", "r")
+fh = open(file_path, "r")
 while True:
     symbol = fh.read(1)
     if len(symbol) == 0:
@@ -73,11 +75,11 @@ fh.close()
 print("~" * 30)
 
 # readline() method
-fh = open("example.txt", "w")
+fh = open(file_path, "w")
 fh.write("first line\nsecond line\nthird line")
 fh.close()
 
-fh = open("example.txt", "r")
+fh = open(file_path, "r")
 while True:
     line = fh.readline()
     if not line:
@@ -95,11 +97,11 @@ print("~" * 30)
 
 
 # readlines() method
-fh = open("example.txt", "w")
+fh = open(file_path, "w")
 fh.write("first line\nsecond line\nthird line")
 fh.close()
 
-fh = open("example.txt", "r")
+fh = open(file_path, "r")
 lines = [el.strip() for el in fh.readlines()]
 print(lines)  # ['first line', 'second line', 'third line']
 
@@ -108,7 +110,7 @@ fh.close()
 print("~" * 30)
 
 # tell() method
-fh = open("example.txt", "w+")
+fh = open(file_path, "w+")
 fh.write("hello!")
 
 position = fh.tell()
