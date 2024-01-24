@@ -32,10 +32,11 @@ can represent 256 different states. 00000000 to 11111111 in binary or \
 0 to 255 in decimal, allowing you to encode a wide range of information, \
 such as text symbols, parts of images or sound."
 
+print("~" * 30)
 s = b"Hello!"
 print(s[1])  # Output: 101 (this is the ASCII code of the character 'e')
 # it returns a number, in our example 101. This is the ASCII code for the character 'e'.
-
+print("~" * 30)
 
 ASCII = "(American Standard Code for Information Interchange) \
 is a character code table used to represent text in computers, \
@@ -53,9 +54,10 @@ characters such as Latin letters with diacritics, graphic symbols, etc."""
 # Let's create the following byte string:
 byte_string = b"Hello world!"
 print(byte_string)
+print("~" * 30)
+
 
 # The second way to create byte strings is to convert to a byte string.
-
 
 """To convert a string into a byte string, 
 you can use the encode string method. 
@@ -67,14 +69,50 @@ the same representation of characters regardless of system or platform.
 
 byte_str = "some text".encode()
 print(byte_str)
+print("~" * 30)
+
 
 # The sequence of bytes b'some text' will be written in byte_str.
 
-# Syntax:
-str.encode(encoding="utf-8", errors="strict")
+syntax = 'str.encode(encoding="utf-8", errors="strict")'
 
 encoding = 'specifies the encoding method. The default is "utf-8", \
     which supports a large number of characters from different languages.'
 errors = "specifies how to handle encoding errors. For example, \
     'strict' to throw an exception on error, 'ignore' to ignore errors, \
         or 'replace' to replace unencodeable characters with a specific substitute (?)."
+
+
+# Convert numbers to byte strings
+"""In Python, you can convert numbers to 
+byte strings using the built-in bytes function. 
+This is useful for working with binary data, 
+especially when you need to store or transfer 
+numeric values in a format optimized for low-level processing.
+"""
+
+
+"""One byte holds a number from 0 to 255 inclusive, 
+so you can convert a sequence of numbers from 0 to 255
+ into a byte string using the bytes function:
+"""
+
+# Convert a list of numbers to a byte string
+numbers = [0, 128, 255]
+byte_numbers = bytes(numbers)
+print(byte_numbers)  # b'\x00\x80\xff'
+print("~" * 30)
+
+"""In this example, the numbers 0 to 255 are converted to the corresponding bytes. 
+Since each number in the range 0 to 255 occupies exactly one byte, 
+they are directly converted to a byte string. To output bytes, 
+it is most convenient to use hexadecimal notation, in which two characters 
+are enough to write numbers from 0 to 255. 
+This is the notation Python uses "by default" for bytes."""
+
+# the hexadecimal form of the record
+for num in [127, 255, 156]:
+    print(hex(num))  # 0x7f
+    # 0xff
+    # 0x9c
+print("~" * 30)

@@ -12,12 +12,17 @@ In Python, you can convert a datetime object to a timestamp and vice versa."""
 
 # Datetime to timestamp conversion
 timestamp = datetime.timestamp(current_datetime)
+print("~" * 30)
 print(f"timestamp - {timestamp}")
+print("~" * 30)
 
 # Conversion of a timestamp into a datetime object
 timestamp = 1617183600
 
 dt_object = datetime.fromtimestamp(timestamp)
 print(f"dt_object - {dt_object}")
+print("~" * 30)
 
+print('dir(datetime)')
 print(dir(datetime))
+print("~" * 30)

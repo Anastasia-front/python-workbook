@@ -21,6 +21,7 @@ Such sets cannot be changed after they are created."""
 
 # list methods
 
+print("~" * 30)
 chars = ["a", "b", "c"]
 numbers = [1, 2]
 chars.extend(numbers)
@@ -35,12 +36,15 @@ chars.sort(reverse=True)
 chars.reverse()
 reverse_chars = chars[::-1]
 chars.clear()  # []
+
+print("dir(list)")
 print(dir(list))
+print("~" * 30)
 
 # dict methods
 
 info = {"name": "Julia", "age": 14, "city": "Kharkiv", "email": "usere@example.com"}
-info["number"]=483498438
+info["number"] = 483498438
 print(f'This is value of number key - {info["number"]}')
 print("name" in info)
 del info["city"]
@@ -52,7 +56,10 @@ level = info.get("level")
 # caused KeyError
 # level = info["level"]
 info.clear()
+
+print("dir(dict)")
 print(dir(dict))
+print("~" * 30)
 
 # set methods
 lst = [1, 2, 3, 1, 2, 2, 3, 4, 1]
@@ -70,18 +77,27 @@ print(a.symmetric_difference(b))  # {1, 2, 4, 5}
 print(a ^ b)  # {1, 2, 4, 5}
 print(a.union(b))  # {1, 2, 3, 4, 5}
 print(a | b)  # {1, 2, 3, 4, 5}
+
+print("dir(set)")
 print(dir(set))
+print("~" * 30)
 
 my_frozenset = frozenset([1, 2, 3, 4, 5])
 print(my_frozenset)
+
+print("dir(frozenset)")
 print(dir(frozenset))
+print("~" * 30)
 
 # tuple methods
 my_tuple = tuple(lst)
 my_tuple.count(1)
 my_tuple.index(2)
 print(my_tuple)
+
+print("dir(tuple)")
 print(dir(tuple))
+print("~" * 30)
 
 # string method
 s = "Responsive Mockup of an iMac with a White iPad and iPhone"
@@ -97,6 +113,7 @@ a, b, c = my_list
 a, _, c = my_list
 a, *rest = my_list
 print(*rest)
+print("~" * 30)
 
 
 def greet(name, age):
@@ -105,3 +122,4 @@ def greet(name, age):
 
 person_info = {"name": "Alice", "age": 25}
 greet(**person_info)
+print("~" * 30)

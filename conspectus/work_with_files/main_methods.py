@@ -4,10 +4,10 @@
  you can write something to it and read something."""
 
 # open() method
-open = 'open(file, mode="r", buffering=-1, encoding=None, \
+open_method = 'open(file, mode="r", buffering=-1, encoding=None, \
 errors=None, newline=None, closefd=True, opener=None)'
 
-'''Parameters:
+"""Parameters:
 
 file - the path to the file in the form of a string. 
 This can be a full path or a path relative to the current execution directory.
@@ -30,17 +30,21 @@ newline (optional) - controls how newlines are handled.
 
 closefd (optional) - must be True (default); if set to False, the file handle will not be closed.
 
-opener (optional) - defines a special function for opening the file.'''
+opener (optional) - defines a special function for opening the file."""
 
 # SIMPLE EXAMPLE -  write() open the file for writing or create a new one if it doesn't exist or overwrite the file, you can specify the w mode value
-fh = open('test.txt', 'w')
-symbols_written = fh.write('hello!')
-print(symbols_written) # 6
+print("~" * 30)
+filename = "example.txt"
+fh = open(filename, "w")
+symbols_written = fh.write("hello!")
+print(symbols_written)  # 6
 fh.close()
 
+print("~" * 30)
+
 # SECOND EXAMPLE - read()
-fh = open('test.txt', 'w+')
-fh.write('hello!')
+fh = open("example.txt", "w+")
+fh.write("hello!")
 fh.seek(0)
 
 first_two_symbols = fh.read(2)
@@ -48,54 +52,63 @@ print(first_two_symbols)  # 'he'
 
 fh.close()
 
+print("~" * 30)
+
 # MORE COMPLICATED EXAMPLE
-fh = open('test.txt', 'w')
-fh.write('bye')
+fh = open("example.txt", "w")
+fh.write("bye")
 fh.close()
 
-fh = open('test.txt', 'r')
+fh = open("example.txt", "r")
 while True:
     symbol = fh.read(1)
     if len(symbol) == 0:
         break
-    print(symbol) #b
-                  #y
-                  #e
+    print(symbol)  # b
+    # y
+    # e
 
 fh.close()
+
+print("~" * 30)
 
 # readline() method
-fh = open('test.txt', 'w')
-fh.write('first line\nsecond line\nthird line')
+fh = open("example.txt", "w")
+fh.write("first line\nsecond line\nthird line")
 fh.close()
 
-fh = open('test.txt', 'r')
+fh = open("example.txt", "r")
 while True:
     line = fh.readline()
     if not line:
         break
-    print(line) #first line
+    print(line)
+    # first line
 
-                #second line
+    # second line
 
-                #third line
+    # third line
 
 fh.close()
+
+print("~" * 30)
 
 
 # readlines() method
-fh = open("test.txt", "w")
+fh = open("example.txt", "w")
 fh.write("first line\nsecond line\nthird line")
 fh.close()
 
-fh = open("test.txt", "r")
+fh = open("example.txt", "r")
 lines = [el.strip() for el in fh.readlines()]
-print(lines) #['first line', 'second line', 'third line']
+print(lines)  # ['first line', 'second line', 'third line']
 
 fh.close()
 
+print("~" * 30)
+
 # tell() method
-fh = open("test.txt", "w+")
+fh = open("example.txt", "w+")
 fh.write("hello!")
 
 position = fh.tell()
@@ -110,3 +123,5 @@ position = fh.tell()
 print(position)  # 3
 
 fh.close()
+
+print("~" * 30)

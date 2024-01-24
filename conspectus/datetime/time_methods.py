@@ -11,18 +11,23 @@ time.perf_counter(): Returns a high-precision counter for measuring short time i
 
 import time
 
+print("~" * 30)
 current_time = time.time()
 print(f"current_time: {current_time}")
+print("~" * 30)
 
 print(f"Start of pause - {time.time()}")
 time.sleep(2)
 print(f"End of pause - {time.time()}")
+print("~" * 30)
 
 readable_time = time.ctime(current_time)
 print(f"readable_time: {readable_time}")
+print("~" * 30)
 
 local_time = time.localtime(current_time)
 print(f"local_time: {local_time}")
+print("~" * 30)
 
 """The time.struct_time object in Python is a named tuple 
 used to represent time. Each element of the tuple 
@@ -61,5 +66,8 @@ end_time = time.perf_counter()
 # We calculate and display the execution time
 execution_time = end_time - start_time
 print(f"Execution time: {execution_time} seconds")
+print("~" * 30)
 
+print("dir(time)")
 print(dir(time))
+print("~" * 30)

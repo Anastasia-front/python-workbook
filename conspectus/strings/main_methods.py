@@ -2,22 +2,22 @@ useful_link = (
     "https://docs.python.org/3/library/string.html#format-specification-mini-language"
 )
 
-# Control characters (control characters) are special characters
-# used to control and format text in lines. They are often represented
-# as escaped sequences starting with a backslash character (\).
-# Some of the most common control characters in Python include:
+"""Control characters (control characters) are special characters
+used to control and format text in lines. They are often represented
+as escaped sequences starting with a backslash character (\).
+Some of the most common control characters in Python include:
 
-# \n: New line (LF - Line Feed). Used to move to a new line.
+\n: New line (LF - Line Feed). Used to move to a new line.
 
-# \r: Carriage Return (CR - Carriage Return). Used to move the cursor to the beginning of the line.
+\r: Carriage Return (CR - Carriage Return). Used to move the cursor to the beginning of the line.
 
-# \t: Horizontal Tab (HT - Horizontal Tab). Inserts a tab.
+\t: Horizontal Tab (HT - Horizontal Tab). Inserts a tab.
 
-# \b: Slaughter (BS - Backspace). Used to delete the previous character.
+\b: Slaughter (BS - Backspace). Used to delete the previous character.
 
-# \f: Page feed (FF - Form Feed). Used to go to a new page.
+\f: Page feed (FF - Form Feed). Used to go to a new page."""
 
-print(dir(str))
+print("~" * 30)
 
 s = "Hi there!"
 
@@ -30,6 +30,7 @@ print(s.rfind("e"))  # 7
 print(s.rindex("e"))  # 7
 print(s.index("i"))
 # s.index('o') #ValueError
+print("~" * 30)
 
 # str.split(separator=None, maxSplit=-1)
 result = s.split()
@@ -37,6 +38,7 @@ print(result)  # ['Hi', 'there!']
 # string.join(iterable)
 result = " ".join(result)
 print(result)  # Hi there!
+print("~" * 30)
 
 # str.replace(old, new, count=-1)
 new_s = s.replace("there", "PythonPythonPython")
@@ -50,9 +52,11 @@ new_topic = (
     .replace("?", "!")
 )
 print(new_topic)
+print("~" * 30)
 
 print("TestBridgeHook".removeprefix("Test"))  # BridgeHook
 print("TestBridgeHook".removesuffix("Hook"))  # TestBridge
+print("~" * 30)
 
 # processing request parameters - split method
 url_search = "<https://www.google.com/search?q=Cat+and+dog&ie=utf-8&oe=utf-8&aq=t>"
@@ -63,7 +67,7 @@ for el in query.split("&"):
     key, value = el.split("=")
     obj_query.update({key: value.replace("+", " ")})
 print(obj_query)
-
+print("~" * 30)
 
 # a program that converts an input text string into the appropriate Morse code - translate method
 morze_dict = {
@@ -118,5 +122,8 @@ for ch in string:
     result = result + ch.upper().translate(table_morze_dict)
 
 print(result)
+print("~" * 30)
 
+print("dir(string)")
 print(dir(string))
+print("~" * 30)

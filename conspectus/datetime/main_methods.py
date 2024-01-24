@@ -5,6 +5,7 @@ from datetime import datetime
 
 current_datetime = datetime.now()
 
+print("~" * 30)
 print("Current time with datetime.now() method")
 print(f"Year - {current_datetime.year}")
 print(f"Month: {current_datetime.month}")
@@ -16,22 +17,22 @@ print(f"Microsecond: {current_datetime.microsecond}")
 print(f"Timezone Info: {current_datetime.tzinfo}")
 print(f"Date: {current_datetime.date()}")
 print(f"Time: {current_datetime.time()}")
-print("-" * 30)
+print("~" * 30)
 
-# There is a callback method datetime.combine which is used to create
-# a new datetime object by combining date and time objects.
-# This allows you to create a precise moment by specifying
-# the date and time separately and then combining them.
+"""There is a callback method datetime.combine which is used to create
+a new datetime object by combining date and time objects.
+This allows you to create a precise moment by specifying
+the date and time separately and then combining them.
 
-# Basic syntax:
-# datetime.datetime.combine(date_object, time_object)
+Basic syntax:
+datetime.datetime.combine(date_object, time_object)
 
-# date_object: A date object that contains year, month, and day information.
-# time_object: A time object that contains information about hours,
-# minutes, seconds, and microseconds.
-# Creation of date and time objects
+date_object: A date object that contains year, month, and day information.
+time_object: A time object that contains information about hours,
+minutes, seconds, and microseconds.
+Creation of date and time objects"""
 
-
+print("Combining date and time into one datetime object with import datetime as module")
 if isinstance(datetime, object):
     pass
 else:
@@ -42,9 +43,8 @@ else:
     print(time_part)
     # Combining date and time into one datetime object
     combined_datetime = datetime.combine(date_part, time_part)
-
     print(f"Combined Datetime: {combined_datetime}")  #  "2023-12-14 12:30:15"
-
+print("~" * 30)
 
 # Create a datetime object with a specific date
 specific_date = datetime(year=2020, month=1, day=7)
@@ -56,22 +56,24 @@ specific_datetime = datetime(year=2020, month=1, day=7, hour=14, minute=30, seco
 # specific_datetime = datetime(2020, 1, 7, 14, 30, 15)
 
 print(f"Specific Datetime: {specific_datetime}")  # "2020-01-07 14:30:15"
+print("~" * 30)
 
-# The weekday() method is used to get the day of the week number
-# for the specified date. It returns the day of the week number,
-#  where Monday is 0 and Sunday is 6.
+"""The weekday() method is used to get the day of the week number
+for the specified date. It returns the day of the week number,
+ where Monday is 0 and Sunday is 6."""
 
 
 day_of_week = current_datetime.weekday()
 
 # Returns a number from 0 (Monday) to 6 (Sunday)
 print(f"Today: {day_of_week}")
+print("~" * 30)
 
-# To compare two datetime objects in Python, you can use standard comparison operators
-# such as == (equality), != (inequality), < (less than), > (greater than),
-# <= (less than or equal to), and > = (greater than or equal to).
-# These operators allow you to compare dates and times to determine
-# whether one datetime object precedes, follows, or is exactly the same as another.
+"""To compare two datetime objects in Python, you can use standard comparison operators
+such as == (equality), != (inequality), < (less than), > (greater than),
+<= (less than or equal to), and > = (greater than or equal to).
+These operators allow you to compare dates and times to determine
+whether one datetime object precedes, follows, or is exactly the same as another."""
 
 datetime1 = datetime(2023, 3, 14, 12, 0)
 datetime2 = datetime(2023, 3, 15, 12, 0)
@@ -81,5 +83,8 @@ print(f"Datetime1 equals Datetime2: {datetime1 == datetime2}")
 print(f"Datetime1 not equals Datetime2: {datetime1 != datetime2}")
 print(f"Datetime1 is earlier than Datetime2: {datetime1 < datetime2}")
 print(f"Datetime1 is later than Datetime2: {datetime1 > datetime2}")
+print("~" * 30)
 
+print("dir(datetime)")
 print(dir(datetime))
+print("~" * 30)

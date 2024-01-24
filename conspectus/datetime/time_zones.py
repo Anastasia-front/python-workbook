@@ -6,9 +6,10 @@ from datetime import datetime, timedelta, timezone
 local_now = datetime.now()
 utc_now = datetime.now(timezone.utc)
 
+print("~" * 30)
 print(f"local_now - {local_now}")  # 2023-12-14 16:39:33.883454
 print(f"utc_now - {utc_now}")  # 2023-12-14 14:39:33.883454+00:00
-
+print("~" * 30)
 
 """ To convert a time from UTC to another time zone, you need to 
 define a timezone object with the appropriate offset. For example, 
@@ -22,6 +23,7 @@ utc_time = datetime.now(timezone.utc)
 eastern_time = utc_time.astimezone(timezone(timedelta(hours=-5)))
 # Converts UTC time to Eastern Time Zone time
 print(f"eastern_time - {eastern_time}")  # 2023-12-14 09:43:06.778253-05:00
+print("~" * 30)
 
 """To convert local time to UTC time, you must first assign
 local time the corresponding time zone, and then use the 
@@ -36,7 +38,7 @@ local_time = datetime(
 # Convert local time to UTC
 utc_time = local_time.astimezone(timezone.utc)
 print(f"utc_time - {utc_time}")  # 2023-03-14 10:30:00+00:00
-
+print("~" * 30)
 
 # In this example, we created a datetime object
 # with time zone UTC+2 (Kyiv) and converted it to UTC time.
@@ -58,7 +60,7 @@ iso_format_with_timezone = timezone_datetime.isoformat()
 print(
     f"iso_format_with_timezone - {iso_format_with_timezone}"
 )  # 2023-03-14T12:30:00+02:00
-
+print("~" * 30)
 
 """These methods in the datetime module make working
 with the ISO format simple and efficient, 
@@ -90,4 +92,6 @@ in ISO 8601 format with a time zone.
 This is useful for representing the date and time 
 in a single, standardized way."""
 
+print("dir(timezone)")
 print(dir(timezone))
+print("~" * 30)

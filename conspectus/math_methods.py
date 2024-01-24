@@ -40,6 +40,7 @@ import math
 
 # Correct comparison of real numbers
 
+print("~" * 30)
 print(0.1 + 0.2 == 0.3)  # False
 print(0.1 + 0.2)  # 0.30000000000000004
 
@@ -47,4 +48,6 @@ print(0.1 + 0.2)  # 0.30000000000000004
 r = math.isclose(0.1 + 0.2, 0.3)
 print(r)  # True
 
+print("dir(math)")
 print(dir(math))
+print("~" * 30)

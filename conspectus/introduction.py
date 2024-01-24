@@ -3,14 +3,17 @@ specific to a programming language that describe
 a set of instructions for a computer."""
 
 
-# But the symbols, words, and phrases that make up a program are not really understandable to a machine.
-# There is a step that is performed after the program is written that converts the source code in the file
-# into a set of instructions that the computer can understand. This is done by a special program: a compiler or an interpreter.
+"""But the symbols, words, and phrases that make up 
+a program are not really understandable to a machine.
+There is a step that is performed after the program 
+is written that converts the source code in the file
+into a set of instructions that the computer can understand. 
+This is done by a special program: a compiler or an interpreter.
 
 
-# A compiler and an interpreter are the two main types of interpreters
-# used to convert code written in a programming language
-# into machine code that a computer can execute.
+A compiler and an interpreter are the two main types of interpreters
+used to convert code written in a programming language
+into machine code that a computer can execute."""
 
 
 compiler = """converts all program code into machine code before executing it. 

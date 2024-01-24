@@ -30,47 +30,61 @@ random.uniform(a, b): Obtain a random real number N such that a <= N <= b."""
 
 import random
 
+print("~" * 30)
 # randint
 random_int = random.randint(1, 1000)
 print(f"random_int - {random_int}")
 
+print("~" * 30)
 # random
 random_random = random.random()
 print(f"random_random - {random_random}")
+print("~" * 30)
+
 
 # randrange
 target = random.randrange(1, 11, 2)
 print(f"target - {target}")
+print("~" * 30)
 
 # shuffle
 cards = ["Ace", "King", "Queen", "Jack", "10", "9", "8", "7", "6"]
 random.shuffle(cards)
 print(f"Shuffled deck: {cards}")
+print("~" * 30)
 
 # choice
 fruits = ["apple", "banana", "orange"]
 print(f"choice - {random.choice(fruits)}")
+print("~" * 30)
 
 # choices
 chosen_item = random.choices(fruits, k=1)
 print(f"chosen_item - {chosen_item}")
+print("~" * 30)
 
 numbers = [1, 2, 3, 4, 5]
 chosen_numbers = random.choices(numbers, k=3)
 print(f"chosen_numbers - {chosen_numbers}")
+print("~" * 30)
 
 colors = ["red", "green", "blue"]
 weights = [10, 1, 1]
 chosen_color = random.choices(colors, weights, k=1)
 print(f"chosen_color - {chosen_color}")
+print("~" * 30)
 
 # sample
 participants = ["Anna", "Brandon", "Dru", "Eleanor", "Joseph"]
 team = random.sample(participants, 4)
 print(f"Team: {team}")
+print("~" * 30)
 
 # uniform
 price = random.uniform(50, 100)
 print(f"Random price: {price:.2f}")
+print("~" * 30)
 
+print("dir(random)")
 print(dir(random))
+print("~" * 30)

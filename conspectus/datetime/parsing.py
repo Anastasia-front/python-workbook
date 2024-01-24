@@ -37,7 +37,7 @@ Here are some of the most used codes:
 %b or %h is the abbreviated name of the month (for example, Mar).
 %p - AM or PM for 12-hour format."""
 
-
+print("~" * 30)
 formatted_date_and_time = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
 print(f"formatted_date_and_time - {formatted_date_and_time}")
 
@@ -49,6 +49,7 @@ print(f"formatted_date_only - {formatted_date_only}")
 
 formatted_time_only = current_datetime.strftime("%I:%M %p")
 print(f"formatted_time_only - {formatted_time_only}")
+print("~" * 30)
 
 """The strptime method in Python is used to convert strings into datetime objects. 
 This method is the opposite of strftime, which converts datetime objects to strings. 
@@ -73,5 +74,8 @@ datetime_object = datetime.strptime(date_string, "%Y.%m.%d")
 print(
     f"datetime_object - { datetime_object}"
 )  # Prints a datetime object corresponding to the specified date and time
+print("~" * 30)
 
+print("dir(datetime)")
 print(dir(datetime))
+print("~" * 30)

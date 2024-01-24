@@ -10,6 +10,7 @@ TabError = "occurs if you use spaces and tabs to\
 typeError = "occurs when an operation on a variable of this type is not possible"
 
 # exception handling mechanism - al blocks of code
+print("~" * 30)
 letter = "a"
 try:
     letter = int(letter)
@@ -19,7 +20,7 @@ else:
     print(letter > 0)
 finally:
     print("This will be printed anyway")
-print("." * 50)
+print("~" * 30)
 
 # Exception for all error types
 while 1:
@@ -38,7 +39,7 @@ while 1:
         print(f"Error: {error}")
     finally:
         print("Program is finished")
-print("." * 50)
+print("~" * 30)
 
 #  break operator
 while True:
@@ -54,7 +55,7 @@ while True:
     except ValueError:
         print(f"`{age}` is not a number. Please enter a number")
     finally:
-        print("-" * 30)
+        print("~" * 30)
 
 
 # continue operator
@@ -91,4 +92,4 @@ while "truthy value":
     except Exception as error:
         print(f"Error: {error}")
     finally:
-        print("_" * 30)
+        print("~" * 30)
