@@ -29,8 +29,9 @@ If not specified, the current directory is used.
 base_dir - the directory inside the archive from which the archiving will start.
 """
 
+
 # creates the archive in the current working directory
-# move the archive from the current working directory 
+# move the archive from the current working directory
 # to the desired destination inside the source directory
 def create_and_move_archive(base_name, format, source_dir):
     # Create the archive in the current working directory
@@ -39,6 +40,7 @@ def create_and_move_archive(base_name, format, source_dir):
     # Move the archive to the source directory
     destination_path = f"{source_dir}/{base_name}.{format}"
     shutil.move(archive_path, destination_path)
+
 
 print("~" * 30)
 # Creating a ZIP archive with the contents of the directory 'my_folder'
