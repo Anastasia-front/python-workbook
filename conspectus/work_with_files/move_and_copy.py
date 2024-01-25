@@ -11,8 +11,8 @@ or shutil.copy2() function is used to copy files.
 # Example of copying a file:
 
 # Source and destination files
-source = Path("/path/to/source/file.txt")
-destination = Path("/path/to/destination/file.txt")
+source = Path("./example/pathlib.txt")
+destination = Path("./example/copy/pathlib.txt")
 
 # Copying the file
 shutil.copy(source, destination)
@@ -28,8 +28,8 @@ The shutil.move() function is used to move files."""
 # Example of moving a file:
 
 # Source and destination paths
-source = Path("/path/to/source/file.txt")
-destination = Path("/path/to/destination/file.txt")
+source = Path("./example/example.txt")
+destination = Path("./example/move/example.txt")
 
 # Move the file
 shutil.move(source, destination)
@@ -40,12 +40,12 @@ shutil.move(source, destination)
 
 # Getting the file size
 
-file_path = Path("./picture/bot-icon.png")
+file_path = Path("./example/picture/bot.png")
 
 # Getting the file size
 print("~" * 30)
 size = file_path.stat().st_size
-print(f"File size: {size} bytes")  # File size: 2876 bytes
+print(f"File size: {size} bytes")  # File size: 13694 bytes
 print("~" * 30)
 
 
@@ -54,7 +54,7 @@ the st_ctime attribute, and the file's last modification time,
 the st_mtime attribute.
 """
 
-file_path = Path("./picture/bot-icon.png")
+file_path = Path("./example/picture/bot.png")
 
 # Creation and modification time
 creation_time = file_path.stat().st_ctime
@@ -75,9 +75,7 @@ a file. It deletes the file pointed to by the Path object.
 """
 
 
-# Syntax
-Path.unlink(missing_ok=False)
-
+syntax = "Path.unlink(missing_ok=False)"
 
 """If the missing_ok parameter is set to True, 
 no exception will be thrown if the file does not exist.
@@ -86,7 +84,7 @@ exception will be thrown if the file does not exist.
 """
 
 # Creating a Path object for the file
-file_path = Path("/path/to/file.txt")
+file_path = Path("./example/remove/example.txt")
 
 # Check if the file exists before deleting
 if file_path.exists():
@@ -105,7 +103,7 @@ It is also possible to delete a file without
 first checking for its existence using the missing_ok option."""
 
 
-file_path = Path("/path/to/file.txt")
+file_path = Path("./example/remove/example.txt")
 file_path.unlink(missing_ok=True)
 
 

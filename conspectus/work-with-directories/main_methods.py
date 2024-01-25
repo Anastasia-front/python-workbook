@@ -3,7 +3,12 @@ and subdirectories in the specified directory. This method
 returns an iterator that produces Path objects for each file and 
 subdirectory in the directory specified by the current Path object."""
 
+import os
 from pathlib import Path
+
+# Get the current working directory
+current_directory = os.getcwd()
+print(f"Current working directory: {current_directory}")
 
 # Creating a Path object for the directory
 directory = Path("./example")
@@ -16,7 +21,7 @@ print("~" * 30)
 
 """The mkdir() method is used to create a new directory.
 """
-Path.mkdir(mode=0o777, parents=False, exist_ok=False)
+# Path.mkdir(mode=0o777, parents=False, exist_ok=False)
 
 """
 Parameters:
@@ -26,8 +31,15 @@ exist_ok - If true, no error will be thrown if the directory already exists.
 
 """
 
-directory = Path("/example/new_folder")
+directory = Path("./example/new_folder")
+print(directory)
 directory.mkdir(parents=True, exist_ok=True)
+
+file_path = f"{directory}/example.txt"
+# add file
+with open(file_path, "w") as file:
+    file.write("This is some content for the file.")
+
 for path in directory.iterdir():
     print(path)
 print("~" * 30)
@@ -36,10 +48,21 @@ print("~" * 30)
 It deletes the directory, but the directory must be empty.
 """
 
-directory = Path("/example/new_folder")
+directory = Path("./example/new_folder")
+file_path = Path("./example/new_folder/example.txt")
+
+# Check if the file exists before deleting
+if file_path.exists():
+    file_path.unlink()
+    print(f"File {file_path} has been deleted")
+else:
+    print(f"The file {file_path} does not exist")
+
 directory.rmdir()
-for path in directory.iterdir():
-    print(path)
+print(
+    f"Delete {directory} folder -  having cleared it first\
+ / the folder must be empty otherwise an error will occur"
+)
 print("~" * 30)
 
 """The pathlib module also provides several methods 
@@ -50,7 +73,7 @@ the is_dir() method checks whether the object is a directory.
 the is_file() method checks whether the object is a file."""
 
 
-path = Path("./picture")
+path = Path("./example/picture")
 
 # Existence check
 if path.exists():

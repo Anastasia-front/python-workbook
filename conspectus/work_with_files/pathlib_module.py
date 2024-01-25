@@ -44,7 +44,7 @@ the address string in the file system as an argument:
 """
 
 
-p = Path("example.txt")
+p = Path("/Users/Anastasia/Desktop/python-workbook/example/example.txt")
 p.write_text("Hello, Rob")  # Hello, Rob
 print(p.read_text())
 print("Exists:", p.exists())  # Exists: True
@@ -173,7 +173,7 @@ It does not contain complete location information
 # between absolute and relative formats.
 
 # Conversion of relative path to absolute
-relative_path = Path("documents/example.txt")
+relative_path = Path("example/example.txt")
 absolute_path = relative_path.absolute()
 print(absolute_path)
 print("~" * 30)
@@ -201,11 +201,11 @@ is used to obtain a relative path relative to a given directory.
 """
 
 # Conversion of relative path to absolute
-relative_path = Path("documents/example.txt")
+relative_path = Path("example/example.txt")
 absolute_path = relative_path.absolute()
 
 current_working_directory = Path(
-    "E:\WebDir\Works\Python\python-help-solution\example_for_new_core\l04"
+    "/Users/Anastasia/Desktop/python-workbook/example/example.txt"
 )
 relative_path = absolute_path.relative_to(current_working_directory)
 print(relative_path)
@@ -293,11 +293,12 @@ example.txt to report.txt in the documents directory on disk.
 """
 
 
-original_path = Path("documents/example.txt")
+original_path = Path("example/example.txt")
 
 # Creates a new Path object with a different filename
 new_path = original_path.with_name("report.txt")
 original_path.rename(new_path)
+print(new_path)
 print("~" * 30)
 
 
@@ -313,9 +314,7 @@ but are an addition.
 """The read_text() and write_text() methods are used to read and write text files.
 """
 
-# Syntax of the read_text() method
-
-Path.read_text(encoding=None, errors=None)
+syntax = "Path.read_text(encoding=None, errors=None)"
 
 """
 Parameters:
@@ -324,9 +323,8 @@ If not specified, the default encoding is used.
 errors - optional, instructions on how to handle decoding errors.
 """
 
-# Syntax of the write_text() method
+syntax = 'Path.write_text("data", encoding=None, errors=None)'
 
-Path.write_text("data", encoding=None, errors=None)
 
 """
 Parameters:
@@ -350,14 +348,14 @@ replacement symbol, according to the documentation, the symbol '?'.
 """
 # An example of writing text to a file
 # Creating a Path object for the file
-file_path = Path("example.txt")
+file_path = Path("example/pathlib.txt")
 # Writing text to a file
 file_path.write_text("Hello world!", encoding="utf-8")
 
 
 # An example of reading text from a file
 # Creating a Path object for the file
-file_path = Path("example.txt")
+file_path = Path("example/pathlib.txt")
 # Reading text from a file
 text = file_path.read_text(encoding="utf-8")
 print(text)  # Hello world!
@@ -368,7 +366,7 @@ methods are used to read and write binary files.
 """
 # An example of writing binary data to a file
 # Create a Path object for the binary file
-file_path = Path("example.bin")
+file_path = Path("example/pathlib.bin")
 # Binary data to record
 data = b"Python is great!"
 # Writing bytes to a file
@@ -377,7 +375,7 @@ file_path.write_bytes(data)
 
 # An example of reading binary data from a file
 # Create a Path object for the binary file
-file_path = Path("example.bin")
+file_path = Path("example/pathlib.bin")
 # Reading bytes from a file
 binary_data = file_path.read_bytes()
 print(binary_data)  # b'Python is great!'
