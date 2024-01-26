@@ -15,7 +15,10 @@ source = Path("./example/pathlib.txt")
 destination = Path("./example/copy/pathlib.txt")
 
 # Copying the file
+print("~" * 30)
 shutil.copy(source, destination)
+print(f"File from '{source.parent}' folder copy into '{destination.parent}' folder")
+print("~" * 30)
 
 
 """The shutil.copy() function copies the contents 
@@ -31,9 +34,16 @@ The shutil.move() function is used to move files."""
 source = Path("./example/example.txt")
 destination = Path("./example/move/example.txt")
 
+# create file in advance
+folder_path = "example"
+file_path = f"{folder_path}/example.txt"
+with open(file_path, "w") as file:
+    file.write("This is some content for the file.")
+
 # Move the file
 shutil.move(source, destination)
-
+print(f"File from '{source.parent}' folder move into '{destination.parent}' folder")
+print("~" * 30)
 
 """The stat() method returns information about a file, including its size.
 """
@@ -43,7 +53,7 @@ shutil.move(source, destination)
 file_path = Path("./example/picture/bot.png")
 
 # Getting the file size
-print("~" * 30)
+
 size = file_path.stat().st_size
 print(f"File size: {size} bytes")  # File size: 13694 bytes
 print("~" * 30)
@@ -84,7 +94,7 @@ exception will be thrown if the file does not exist.
 """
 
 # Creating a Path object for the file
-file_path = Path("./example/remove/example.txt")
+file_path = Path("./example/move/example.txt")
 
 # Check if the file exists before deleting
 if file_path.exists():
@@ -103,7 +113,7 @@ It is also possible to delete a file without
 first checking for its existence using the missing_ok option."""
 
 
-file_path = Path("./example/remove/example.txt")
+file_path = Path("./example/move/example.txt")
 file_path.unlink(missing_ok=True)
 
 
