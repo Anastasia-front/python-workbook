@@ -10,28 +10,19 @@ what to do (list the installed packages). The output will be similar
 to this, but will differ because different computers have their own set of installed packages.
 """
 
-# To install the latest version of the package, using the requests package as an example:
-#   pip install requests
+# Installing of packages
+latest_version = "pip install requests"
 
+specific_version = "pip install requests==2.28.2"
 
-# To install a specific version of the requests package:
-# pip install requests==2.28.2
+package_newer_than = "pip install requests>=2.28.2"
 
+package_earlier_than = "pip install requests<=2.28.2"
 
-# Installing a version of the requests package newer than 2.28.2:
-# pip install requests>=2.28.2
+removing = "pip uninstall requests"
 
+list_of_installed_packages_with_versions = "pip freeze"
 
-# Installing a version of the requests package earlier than 2.28.2:
-# pip install requests<=2.28.2
-
-
-# Removing the requests package:
-# pip uninstall requests
-
-
-# List of installed packages with versions:
-# pip freeze
 
 """A virtual environment is an isolated environment for Python projects. 
 By using a virtual environment, you can install libraries and their 
@@ -53,7 +44,7 @@ To create a new virtual environment, follow these steps:
 3. Run the following command to create a virtual environment:
 """
 
-# python -m venv .venv
+first_step = "python -m venv .venv /python3 -m venv .venv"
 
 """
 This will create a .venv directory in the current directory 
@@ -70,13 +61,13 @@ use one of the following commands, depending on your system and shell:
 """
 
 # On Windows in the command line (CMD):
-# .\.venv\Scripts\activate.bat
+second_step = ".\.venv\Scripts\activate.bat"
 
 # On Windows in PowerShell:
-# .\.venv\Scripts\Activate.ps1
+second_step = ".\.venv\Scripts\Activate.ps1"
 
 # On macOS and Linux:
-# source .venv/bin/activate
+second_step = "source .venv/bin/activate"
 
 """
 Once activated, the command prompt will change to display 
@@ -95,9 +86,9 @@ For example, for PowerShell under Windows, executing the command:
 """
 As you can see, we are told (.venv) that we are now in a 
 virtual environment located in the .venv directory.
- Now, after activation in this console, the python call 
- will not call the system Python, but the version from 
- the .venv directory with its packages.
+Now, after activation in this console, the python call 
+will not call the system Python, but the version from 
+the .venv directory with its packages.
 
 After enabling the virtual environment, you can install/remove 
 packages using pip in the virtual environment. Installing/removing 
@@ -105,13 +96,13 @@ packages affects only the virtual environment and
 does not affect the system or other projects."""
 
 # To install the necessary libraries within this virtual environment, use pip install:
-# pip install package_name
+third_step = "pip install package_name"
 
 
 """These installed libraries will be isolated from the global Python environment."""
 
 # To switch back to system Python, run in the console:
-#   deactivate
+switch_back = "deactivate"
 
 """
 This will return you to the global Python environment.

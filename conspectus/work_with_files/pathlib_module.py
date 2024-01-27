@@ -45,8 +45,8 @@ the address string in the file system as an argument:
 
 
 p = Path("/Users/Anastasia/Desktop/python-workbook/example/example.txt")
-p.write_text("Hello, Rob")  # Hello, Rob
-print(p.read_text())
+p.write_text("Hello, Rob")  
+print(p.read_text())  # Hello, Rob
 print("Exists:", p.exists())  # Exists: True
 print("~" * 30)
 
