@@ -1,0 +1,6 @@
+The yield operator behaves in a similar way to return, 
+it returns control of the flow of program execution 
+from the body of the function. But, unlike return, 
+yield does not start the execution of the function 
+from the beginning at the next call, but continues 
+from the point where the function stopped.
