@@ -92,8 +92,8 @@ match = re.search(pattern, email)
 if match:
     user_name = match.group(1)
     domain_name = match.group(2)
-    print("User name:", user_name)
-    print("Domain:", domain_name)
+    print("User name:", user_name) # random
+    print("Domain:", domain_name) # fix.com
 print("~" * 30)
 
 # 5 - find all the numbers in the string
