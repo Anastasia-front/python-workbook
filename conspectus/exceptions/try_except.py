@@ -1,6 +1,6 @@
 # The main types of exceptionsS
-SyntaxError = "is a syntax error"
-ZeroDivisionError = "division by zero"
+syntaxError = "is a syntax error"
+zeroDivisionError = "division by zero"
 valueError = "occurs when the type of the operand is correct, \
     but the value is such that the operation cannot be performed."
 IndentationError = "is an error that occurs if an error is made \
@@ -21,6 +21,24 @@ else:
 finally:
     print("This will be printed anyway")
 print("~" * 30)
+
+# ANOTHER EXAMPLE
+try:
+    # Code that may throw an exception
+    result = 10 / 0
+except ZeroDivisionError:
+    # Handle division-by-zero exception
+    print("Division by zero!")
+except Exception as e:
+    # Handle any other exception
+    print(f"An error occurred: {e}")
+else:
+    # Executed if no exception was thrown
+    print("Everything was successful!")
+finally:
+    # Always executed, regardless of whether an exception was thrown or not
+    print("The finally block is always executed.")
+
 
 # Exception for all error types
 while 1:
