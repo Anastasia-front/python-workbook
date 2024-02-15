@@ -39,16 +39,16 @@ Here are some of the most used codes:
 
 print("~" * 30)
 formatted_date_and_time = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
-print(f"formatted_date_and_time - {formatted_date_and_time}")
+print(f"formatted_date_and_time - {formatted_date_and_time}") # 2024-02-15 09:57:28
 
 
-formatted_date_only = current_datetime.strftime("%A, %d %B %Y")
-# formatted_date_only = current_datetime.strftime("%d.%m.%Y")
+# formatted_date_only = current_datetime.strftime("%A, %d %B %Y") # Thursday, 15 February 2024
+formatted_date_only = current_datetime.strftime("%d.%m.%Y") # 15.02.2024
 print(f"formatted_date_only - {formatted_date_only}")
 
 
 formatted_time_only = current_datetime.strftime("%I:%M %p")
-print(f"formatted_time_only - {formatted_time_only}")
+print(f"formatted_time_only - {formatted_time_only}") # 09:57 AM
 print("~" * 30)
 
 """The strptime method in Python is used to convert strings into datetime objects. 
