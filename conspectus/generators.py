@@ -120,3 +120,150 @@ When a generator produces a value, its state is "frozen"
 and execution can continue from that point on the next call.
 
 Generators can be iterated in a for loop or manually using the next() function."""
+
+
+# Transferring values to the generator
+
+'''
+The yield operator has a rarer use, it can return a value just like a function call. 
+This allows you to pass values to the generator by calling the send method.
+
+The send() method is used to interact with the generator by sending a value 
+to the generator that can then be used as the result of the yield expression. 
+This allows the generator to not only produce data, but also process external data on each iteration.
+'''
+
+
+def my_generator():
+     received = yield "Ready"
+     yield f"Received: {received}"
+
+gen = my_generator()
+print(next(gen)) # Ready
+print(gen.send("Hello")) # Received: Hello
+
+print("~" * 30)
+'''
+The send() method is used to pass the value directly to the generator. 
+The value passed through send() is the result of the yield expression 
+where the generator was suspended. This allows generators to not only 
+produce values, but also to accept data at any point in their execution.
+
+We start the next(gen) generator and receive the first "Ready" message. 
+We send data to the generator gen.send("Hello") and receive the following value "Received: Hello".
+
+When the generator no longer needs to produce values, it can be closed using the close() method. 
+At the same time, the GeneratorExit exception is called in the generator, which 
+can be intercepted to perform some actions before closing the generator.
+'''
+
+
+def my_generator():
+     try:
+         yield "Working"
+     except GeneratorExit:
+         print("Generator is being closed")
+
+gen = my_generator()
+print(next(gen)) # We get "Working"
+gen.close() # Call to close the generator
+
+print("~" * 30)
+'''
+These mechanisms allow you to implement a rather complex logic of interaction between 
+the code and generators, providing flexibility and control over the execution process of the generators.
+
+For example, let's create a generator that can accept strings of text, 
+filter them according to a certain criterion (for example, return a string 
+if it contains a certain word), and return only those strings that meet this criterion.
+
+
+First, let's consider a simple example. Let's create a square_numbers() generator 
+that will accept numbers through the send() method and perform calculations, 
+take a simple operation of raising to the square, and return the result through yield.
+'''
+
+
+def square_numbers():
+     try:
+         while True: # An infinite loop for accepting numbers
+             number = yield # Getting a number via send()
+             square = number ** 2 # Squaring
+             yield square # Return the result
+     except GeneratorExit:
+         print("Generator closed")
+
+# Creation and start of the generator
+gen = square_numbers()
+
+# Initialize the generator
+next(gen) # Or gen.send(None) to start
+
+# Sending the number to the generator and getting the result
+result = gen.send(10) # Should return 100
+print(f"Square of 10: {result}") # Square of 10: 100
+
+# Go to the next wait
+next(gen)
+
+# Sending another number
+result = gen.send(5) # Should return 25
+print(f"Square of 5: {result}") # Square of 5: 25
+
+# Closing the generator
+gen.close() # Generator closed
+
+
+print("~" * 30)
+'''
+In the code, after each call to send() that returns a number, 
+we need to call next(gen) or send() again to continue executing 
+the generator until the next yield. This is precisely 
+what allows the generator to accept a new value.
+
+Now consider a more complex example. Let's create a filter_lines() 
+generator that will wait for incoming lines through the send() method. 
+Inside the generator, there will be a check: if the string contains 
+a certain word, it will be returned via yield.
+'''
+
+
+def filter_lines(keyword):
+     print(f"Looking for {keyword}")
+     try:
+         while True: # An infinite loop where the generator waits for input
+             line = yield # Receiving a line via send()
+             if keyword in line: # Checking for the presence of a keyword
+                 yield f"Line accepted: {line}"
+             else:
+                 yield None
+     except GeneratorExit:
+         print("Generator closed")
+
+if __name__ == "__main__":
+     # Creation and start of the generator
+     gen = filter_lines("hello")
+     next(gen) # Required to start the generator
+     messages = ["this is a test", "hello world", "another hello world line", "hello again", "goodbye"]
+     hello_messages = []
+     # Sending data to the generator
+     for message in messages:
+         result = gen.send(message) # Send a message to the generator
+         if result: # Add the result only if it is not None
+             hello_messages.append(result)
+         next(gen) # Continue to the next yield: instruction line = yield
+
+     # Closing the generator
+     gen.close()
+     print(hello_messages)
+
+# Output
+# Looking for hello
+# Generator closed
+# ['Line accepted: hello world', 'Line accepted: another hello world line', 'Line accepted: hello again']
+
+print("~" * 30)
+'''
+Overall, this approach makes generators a powerful tool for 
+asynchronous programming, data streaming, and cooperative multitasking in Python.
+'''
