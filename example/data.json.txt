@@ -1,0 +1,5 @@
+{
+    "name": "Микола Кoшoвий",
+    "age": 30,
+    "isStudent": true
+}
