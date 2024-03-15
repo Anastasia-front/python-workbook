@@ -40,3 +40,11 @@
 
 ![alt text](/images/image-12.png)
 ![alt text](/images/image-13.png)
+
+### ER-model
+
+![alt text](/images/imagejhg.png)
+Whole numbers
+![alt text](/images/image1jhg.png)
+Data types: date and time
+![alt text](/images/image-1jhg.png)
