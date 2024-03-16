@@ -41,7 +41,11 @@ SELECT COUNT(user_id) as total_contacts, user_id
 FROM contacts
 GROUP BY user_id;"""
 
-# Output:
+# total_contacts|user_id|
+# --------------+-------+
+#              0|       |
+#              2|      1|
+#              2|      2|
 # we added two contacts for each user. And there is a contact without a user.
 
 
@@ -71,6 +75,10 @@ WHERE user_id IN (SELECT id
      FROM users
      WHERE age < 30);"""
 
+# id|name         |email                    |phone         |favorite|user_id|created_at         |
+# --+-------------+-------------------------+--------------+--------+-------+-------------------+
+#  1|Allen Raymond|nulla.ante@vestibul.co.uk|(992) 914-3792|       0|      1|2024-03-15 16:58:29|
+#  2|Chaim Lewis  |dui.in@egetlacus.ca      |(294) 840-6685|       1|      1|2024-03-15 16:58:29|
 
 """---------------------------------------------------------"""
 
@@ -82,6 +90,14 @@ WHERE user_id IN (SELECT id
 code = """
 SELECT id, name as fullName, phone as mobile
 FROM contacts;"""
+
+# id|fullName     |mobile        |
+# --+-------------+--------------+
+#  1|Allen Raymond|(992) 914-3792|
+#  2|Chaim Lewis  |(294) 840-6685|
+#  3|Kennedy Lane |(542) 451-7038|
+#  4|Wylie Pope   |(692) 802-2949|
+#  5|Cyrus Jackson|(501) 472-5218|
 
 # Aliases are often used when working with related tables.
 
@@ -107,6 +123,12 @@ SELECT u.id, u.name, u.email, g.name AS gender
 FROM users AS u
 INNER JOIN genders AS g ON g.id = u.gender_id;"""
 
+# id|name  |email          |gender|
+# --+------+---------------+------+
+#  1|Boris |boris@test.com |male  |
+#  2|Alina |alina@test.com |female|
+#  3|Maksim|maksim@test.com|male  |
+
 """
 This is a simple example of using JOIN. There are several more options for its use:
 
@@ -124,6 +146,13 @@ SELECT c.id, c.name, c.email, u.name AS owner
 FROM contacts AS c
 JOIN users AS u ON u.id = c.user_id;"""
 
+# id|name         |email                        |owner|
+# --+-------------+-----------------------------+-----+
+#  1|Allen Raymond|nulla.ante@vestibul.co.uk    |Boris|
+#  2|Chaim Lewis  |dui.in@egetlacus.ca          |Boris|
+#  3|Kennedy Lane |mattis.Cras@nonenimMauris.net|Alina|
+#  4|Wylie Pope   |est@utquamvel.net            |Alina|
+
 """In this case, we don't get a contact without a user in the sample because table intersection was used. 
 To get all the contacts, even if they don't have owners from the users table, we need to use a LEFT JOIN.
 """
@@ -132,6 +161,15 @@ code = """
 SELECT c.id, c.name, c.email, u.name AS owner
 FROM contacts AS c
 LEFT JOIN users AS u ON u.id = c.user_id;"""
+
+
+# id|name         |email                        |owner|
+# --+-------------+-----------------------------+-----+
+#  1|Allen Raymond|nulla.ante@vestibul.co.uk    |Boris|
+#  2|Chaim Lewis  |dui.in@egetlacus.ca          |Boris|
+#  3|Kennedy Lane |mattis.Cras@nonenimMauris.net|Alina|
+#  4|Wylie Pope   |est@utquamvel.net            |Alina|
+#  5|Cyrus Jackson|nibh@semsempererat.com       |     |
 
 # This query appended data from the contacts table that was not matched in the users table.
 
