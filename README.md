@@ -41,6 +41,7 @@
 ![alt text](/images/image-12.png)
 ![alt text](/images/image-13.png)
 
+## SQL
 ### ER-model
 
 ![alt text](/images/imagejhg.png)
@@ -48,3 +49,6 @@ Whole numbers
 ![alt text](/images/image1jhg.png)
 Data types: date and time
 ![alt text](/images/image-1jhg.png)
+
+### JOIN: Joining tables
+![alt text](/images/image111.png)

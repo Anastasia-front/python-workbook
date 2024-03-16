@@ -20,6 +20,9 @@ and updating data, such as the INSERT, UPDATE, and DELETE statements."""
 
 DCL = """The Data Control Language consists of statements related to user authorization and security, such as the GRANT and REVOKE statements."""
 
+
+"""---------------------------------------------------------"""
+
 # The SQL standard
 
 """
@@ -56,6 +59,9 @@ SQL is a user-friendly language because it is designed primarily for performing 
 
 SQL is now used by highly skilled professionals such as data analysts, data scientists, developers, and database administrators."""
 
+
+"""---------------------------------------------------------"""
+
 # Basic SQL terms
 
 key = """is a unique field that uniquely identifies a record."""
@@ -78,6 +84,9 @@ many_to_one = (
 Normalization = """is the process of bringing the database structure to a form that provides minimal logical redundancy 
 and does not aim to decrease or increase performance or decrease or increase the physical volume of the database. 
 The ultimate goal of normalization is to reduce the potential inconsistency of information stored in the database."""
+
+
+"""---------------------------------------------------------"""
 
 # Basic SQL statements
 
@@ -109,6 +118,9 @@ SAVEPOINT = """divides the transaction into smaller parts.ALTER"""
 ER_model = """is a data model that allows you to describe the conceptual schemes of a subject area. 
 The ER model is used in high-level (conceptual) database design. With its help, you can highlight key entities 
 and mark the connections that can be established between these entities."""
+
+
+"""---------------------------------------------------------"""
 
 # Data types
 
@@ -158,7 +170,6 @@ YEAR = """is just a year."""
 
 
 # Character data types
-
 # These data types store a string of a certain length.
 
 CHAR_type = """stores characters that are always the same length, so for CHAR(10) 10 characters (not bytes) will always be written. 
@@ -171,9 +182,10 @@ and with VARCHAR(4) it weighs 1 byte, the weight of only the marker. The string 
 
 TEXT_type = """if we need to store description, reviews or even books, then this is the type to go for."""
 
+
+"""---------------------------------------------------------"""
+
 # Basic rules of SQL syntax
-
-
 """
 1. SQL consists of many statements, each of which is usually terminated by a semicolon (;). 
 For example, below are two different instructions:"""
@@ -222,8 +234,9 @@ The first query is used to retrieve data about employees with a salary below the
 The second is to make changes to these data, in particular to increase the salary."""
 
 
-# CREATE TABLE: Creating a table
+"""---------------------------------------------------------"""
 
+# CREATE TABLE: Creating a table
 
 """The CREATE TABLE statement is used to create tables in SQL. 
 It takes parameters of the names of the columns we want to input as well as their data types.
@@ -310,8 +323,10 @@ CREATE TABLE contacts (
          ON UPDATE CASCADE
 );"""
 
-# INSERT: Entering data
 
+"""---------------------------------------------------------"""
+
+# INSERT: Entering data
 
 """
 Now let's fill in our tables. This can be done using the INSERT command. The command format is such that we specify column names 
@@ -346,6 +361,8 @@ VALUES (1, 'Allen Raymond', 'nulla.ante@vestibul.co.uk', '(992) 914-3792', 0, 1)
 (4, 'Wylie Pope', 'est@utquamvel.net', '(692) 802-2949', 0, 2),
 (5, 'Cyrus Jackson', 'nibh@semsempererat.com', '(501) 472-5218', 0, null);"""
 
+
+"""---------------------------------------------------------"""
 
 # SELECT: Getting data
 
