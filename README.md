@@ -42,6 +42,7 @@
 ![alt text](/images/image-13.png)
 
 ## SQL
+
 ### ER-model
 
 ![alt text](/images/imagejhg.png)
@@ -52,3 +53,11 @@ Data types: date and time
 
 ### JOIN: Joining tables
 ![alt text](/images/image111.png)
+
+## NoSQL
+
+### CAP theorem
+![alt text](/images/image22.png)
+
+The following table presents the differences in terminology between SQL and MongoDB.
+![alt text](/images/image33.png)
