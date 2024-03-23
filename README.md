@@ -52,12 +52,26 @@ Data types: date and time
 ![alt text](/images/image-1jhg.png)
 
 ### JOIN: Joining tables
+
 ![alt text](/images/image111.png)
 
 ## NoSQL
 
 ### CAP theorem
+
 ![alt text](/images/image22.png)
 
 The following table presents the differences in terminology between SQL and MongoDB.
 ![alt text](/images/image33.png)
+
+## Data Science
+Life cycle of a Data Science project
+![alt text](/images/image123.png)
+Creation of a model
+![alt text](/images/imagezxc.png)
+Classification of machine learning algorithms
+![alt text](/images/image-1xcv.png)
+Neural networks (deep learning)
+![alt text](/images/image-2cvb.png)
+Recurrent neural networks (RNN), Long Short-Term Memory (LSTM), Gated Recurrent Unit (GRU)
+![alt text](/images/image-3vbn.png)
